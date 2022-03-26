@@ -17,7 +17,7 @@ class PaytmChecksum {
 			decrypted += decipher.final('binary');
 		}
 		catch (e) {
-			console.log(e);
+			console.log("Error");
 		}
 		return decrypted;
 	}
@@ -66,7 +66,6 @@ class PaytmChecksum {
 					resolve(salt);					
 				}
 				else {
-					console.log("error occurred in generateRandomString: " + err);
 					reject(err);
 				}
 			});

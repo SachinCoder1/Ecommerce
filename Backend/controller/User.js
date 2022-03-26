@@ -14,7 +14,7 @@ export const Signup = async (req, res) => {
         res.status(200).json("Signup successful, User created in db")
 
     } catch (error) {
-        console.log("There is an error in signup", error.message)
+        console.log("Error occured")
     }
 }
 
@@ -32,6 +32,6 @@ export const Login = async (req, res) => {
         }
 
     } catch (error) {
-        console.log("There is an error in Login", error.message)
+        console.log("Error")
     }
 }

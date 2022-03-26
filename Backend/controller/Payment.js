@@ -48,7 +48,6 @@ export const paymentResponse = (request, response) => {
         delete request.body.CHECKSUMHASH;
 
         var isVerifySignature = paytmchecksum.verifySignature(request.body, 'bKMfNxPPf_QdZppa', paytmCheckSum);
-        console.log(isVerifySignature);
         if (isVerifySignature) {
             var paytmParams = {};
             paytmParams["MID"] = request.body.MID;
@@ -87,6 +86,6 @@ export const paymentResponse = (request, response) => {
                 post_req.end();
             });
         } else {
-            console.log("Checksum Mismatched");
+            console.log("Error");
         }
 }

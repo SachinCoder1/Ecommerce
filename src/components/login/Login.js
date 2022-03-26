@@ -54,7 +54,7 @@ function Login(props) {
     })
     const handleLoginInputChange = (e) => {
         setloginInputFeilds({ ...loginInputFeilds, [e.target.name]: e.target.value })
-     
+
     }
 
     const handleLogin = async () => {
@@ -72,8 +72,11 @@ function Login(props) {
 
     }
 
+
+
     return (
         <>
+        {/* If login */}
             {props.open === true &&
                 <LoginCont>
                     <CloseBtn>
@@ -128,7 +131,9 @@ function Login(props) {
                                                 </SignupBtn>
                                             </>
                                             :
+
                                             <>
+                                            {/* If signup */ }
                                                 <UpperPart>
                                                     <InputSignup>
 
@@ -149,11 +154,11 @@ function Login(props) {
                                                     <p>Alreday a user, Login</p>
                                                 </SignupBtn>
                                             </>
-                                    }
-                                </>
                             }
-                        </RightPart>
-                    </MainCont>
+                        </>
+                            }
+                    </RightPart>
+                </MainCont>
                 </LoginCont>
             }
         </>
